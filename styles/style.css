@@ -138,6 +138,25 @@ header, .blogContainer, .footerContainer {
     font-size: 18px;
 }
 
+/* match section style */
+.matches {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.singleMatch {
+    border: 1px solid #f3f2f2;
+    border-radius: 12px;
+    margin-top: 0;
+    padding: 30px;
+}
+
+.matchImages {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
 /* footer style */
 footer {
     background-color: var(--backgroundColor);
