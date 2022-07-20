@@ -11,9 +11,11 @@ body {
     --buttonBackground: #DD0000;
 }
 header, .blogContainer, .footerContainer {
+    width: 90%;
     max-width: 1320px;
     margin: 0 auto;
 }
+
 
 /* header style */
 .banner {
@@ -26,6 +28,7 @@ header, .blogContainer, .footerContainer {
 }
 .bannerText {
     color: #FFFFFF;
+    width: 50%;
 }
 .bannerText h1 {
     font-size: 70px;
@@ -49,9 +52,11 @@ header, .blogContainer, .footerContainer {
 .fa-angle-right {
     margin-left: 10px;
 }
+.bannerImage {
+    width: 50%;
+}
 .bannerImage img {
-    width: 581px;
-    height: 613px;
+    width: 100%;
 }
 
 /* blog section style */
@@ -65,7 +70,7 @@ header, .blogContainer, .footerContainer {
     background-color: var(--backgroundColor);
     padding: 30px;
     border-radius: 15px;
-    height: 272px;
+    height: 270px;
 }
 .blogContainer .blogs {
     width: 80%;
@@ -84,11 +89,15 @@ header, .blogContainer, .footerContainer {
     font-size: 20px;
     font-weight: 500;
     border-radius: 10px;
-    width: 252px;
+    width: 100%;
     display: inline-block;
     text-align: center;
     text-decoration: none;
     padding: 20px 0;
+}
+.active {
+    color: #FFFFFF;
+    background-color: var(--buttonBackground);
 }
 .blogs {
     display: grid;
@@ -96,8 +105,8 @@ header, .blogContainer, .footerContainer {
     gap: 20px;
 }
 .singleBlog img {
-    width: 314px;
-    height: 175px;
+    width: 100%;
+    height: 100%;
 }
 .singleBlog {
     border: 1px solid #f3f2f2;
@@ -143,6 +152,7 @@ header, .blogContainer, .footerContainer {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    width: 75%;
 }
 
 .singleMatch {
@@ -156,6 +166,25 @@ header, .blogContainer, .footerContainer {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+.matchImages p {
+    font-size: 16px;
+    color: #121212;
+    font-weight: 600;
+}
+.matchInformation {
+    text-align: center;
+}
+.matchInformation h3 {
+    color: #121212;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0;
+}
+.matchInformation p {
+    color: #4D4D4D;
+    font-size: 16px;
+    font-weight: 400;
 }
 /* footer style */
 footer {
@@ -214,7 +243,7 @@ footer {
 .socialMedia {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 40px;
     margin-top: 30px;
     display: none;
 }
@@ -224,28 +253,28 @@ footer {
 }
 
 /* tablet responsive style with media query*/
-@media  only screen and (min-width: 481px) and (max-width: 768px) {
+@media  only screen and (min-width: 481px) and (max-width: 820px) {
     header, .blogContainer, .footerContainer {
         width: 90%;        
     }
     .banner {
         margin-bottom: 80px;
+        padding: 15px 15px 0 60px;
     }
     .bannerText h1 {
         font-size: 40px;
     }
     .bannerText p {
-        height: 35px;
+        height: 25px;
         overflow: hidden;
-    }
-    .bannerImage img {
-        width: 400px;
-        height: 500px;
     }
     .blogContainer {
         flex-direction: column;
         width: 90%;
         margin: 0 auto;
+    }
+    .blogContainer .blogs {
+        width: 100%;
     }
     .blogContainer nav {
         width: 100%;
@@ -257,8 +286,10 @@ footer {
         flex-direction: row;
         justify-content: space-between;
     }
+    .blogContainer nav ul li {
+        width: 33.33%;
+    }
     .menuButton {
-        width: 180px;
         border: 1px solid #dddddd;
     }
     .blogs {
@@ -269,6 +300,9 @@ footer {
     }
     .viewAllButton {
         display: block;
+    }
+    footer {
+        padding: 80px 0;
     }
     .footerContainer nav ul {
         flex-wrap: wrap;
@@ -282,23 +316,25 @@ footer {
     }
     .banner {
         flex-direction: column;
-        padding: 30px 30px 0;
+        padding: 30px;
+        padding-bottom: 0;
         text-align: center;
         margin-bottom: 30px;
     }
     .bannerText {
         margin-bottom: 40px;
+        width: 100%;
+    }
+    .bannerImage {
+        width: 100%;
     }
     .banner h1 {
-        font-size: 38px;
+        font-size: 22px;
+        font-weight: 700;
     }
     .bannerText p {
-        height: 35px;
+        height: 50px;
         overflow: hidden;
-    }
-    .bannerImage img {
-        width: 350px;
-        height: 450px;
     }
     .blogContainer {
         flex-direction: column;
@@ -318,7 +354,6 @@ footer {
         flex-direction: column;
     }
     .menuButton {
-        width: 274px;
         border: 1px solid #dddddd;
     }
     .blogs {
@@ -327,9 +362,6 @@ footer {
         gap: 35px;
         width: 100%;
         justify-content: center;
-    }
-    .singleBlog img {
-        width: 344px;
     }
     footer {
         padding: 30px 0;
